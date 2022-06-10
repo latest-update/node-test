@@ -16,7 +16,7 @@ class db {
 
         this.connection.query(sql)
             .then(res => {
-                console.log("Table has created");
+                console.log("Table has checked");
             })
             .catch(err => {
                 console.log("Error")
