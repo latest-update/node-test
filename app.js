@@ -1,10 +1,13 @@
 const express = require ( "express" );
 const db = require ( "./db.js" );
 const isEmpty = require('lodash.isempty');
+const cors = require('cors');
 
 const app = express ();
 const jsonParser = express.json();
 const database = new db();
+
+app.use(cors());
 
 app.post("/save", jsonParser, (request, response) => {
     if ( isEmpty(request.body) )
